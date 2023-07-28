@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Clock</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div class="clock">
+            <div class="clock-face">
+                <div class="hand hour-hand"></div>
+                <div class="hand min-hand"></div>
+                <div class="hand sec-hand"></div>
+            </div>
+        </div>
+        <script>
+            function setdate(){
+                let currentTimeDate = new Date();
+                var hours   =  currentTimeDate.getHours();
+                var minutes =  currentTimeDate.getMinutes();
+                hours=hours%12;
+                var seconds= currentTimeDate.getSeconds();
+                document.querySelector(".sec-hand").style.transform=`rotate(${(seconds*6)+90}deg)`;
+                document.querySelector(".min-hand").style.transform=`rotate(${(minutes*6)+90}deg)`;
+                document.querySelector(".hour-hand").style.transform=`rotate(${(hours*30)+90}deg)`;
+            }
+            setInterval(setdate,1000);
+        </script>
+    </body>
+</html>

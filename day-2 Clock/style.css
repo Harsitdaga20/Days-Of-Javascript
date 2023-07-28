@@ -1,0 +1,27 @@
+html{
+    background-image: url(https://cdn.push-entertainment.com/HD/Beautiful-Space-3D-Live-Wallpaper.jpg);
+    text-align: center;
+}
+
+
+.clock-face {
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    border:10px solid navajowhite;
+    position:absolute;
+    bottom:50%;
+    right:50%
+}   
+
+.hand{
+    width:50%;
+    height:3px;
+    background-color: black;
+    position: absolute;
+    top:50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.01, 2.7, 0.58, 1);
+}
